@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Convertor</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width , initial-scale=1.0">
+<style>
+#frame{
+margin-top:4%;
+width:35%;
+height:80vh;
+border:2px solid #7c957c;
+background-color:#223622;
+}
+
+h2{
+width:100%;
+height:5vh;
+border-bottom:2px solid #7c957c;
+font-family:Bradley Hand ITC;
+font-size:1.8vw;
+color:#c7e0c7;
+}
+
+input[type="text"]{
+height:8vh;
+width:80%;
+margin-top:6%;
+text-align:center;
+font-size:2vw;
+font-family:Comic Sans MS;
+border-radius:4px;
+border:3px solid #7c957c;
+color:#c7e0c7;
+}
+
+input[type="button"],[type="reset"]{
+width:50%;
+height:6vh;
+margin:5%;
+font-family:Bradley Hand ITC;
+font-size:1.2vw;
+border:none;
+border-radius:4px;
+font-weight:bold;
+cursor:pointer;
+background-color:#6ba46b;
+color:white;
+}
+
+input[type="reset"]{
+color:red;
+width:12%;
+}
+</style>
+</head>
+<body>
+<center>
+<div id="frame">
+<h2><b>Umair Digit Convertor<b></h2>
+<form>
+<input type="text" name="integer" title="Enter Any Positive Decimal Value" id="convertor"><br>
+<input type="button" value="Binary" onclick="binary()"><br>
+<input type="button" value="Octal" onclick="octal()"><br>
+<input type="button" value="Hexadecimal" onclick="hexadecimal()"><br>
+<input type="reset" value="X" title="Click To Reset">
+</form>
+</div>
+<script>
+function binary(){
+var x=document.getElementById('convertor').value;
+var binary=parseInt(x);
+document.getElementById('convertor').value=binary.toString(2);
+}
+function octal(){
+var y=document.getElementById('convertor').value;
+var octal=parseInt(y);
+document.getElementById('convertor').value=octal.toString(8);
+}
+function hexadecimal(){
+var z=document.getElementById('convertor').value;
+var hexadecimal=parseInt(z);
+document.getElementById('convertor').value=hexadecimal.toString(16);
+}
+</script>
+</center>
+</body>
+</html>
